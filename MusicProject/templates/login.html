@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,3 +16,19 @@
     </form>
   </body>
 </html>
+=======
+{% extends "base.html" %}
+{% block body_block %}
+
+<div class="jumbotron">
+    <h1>Login</h1>
+    <form action="{% url 'userr_login' %}" method="POST">
+        {% csrf_token %}
+        Username:<input type="text" name="username" placeholder="Username">
+        Password:<input type="text" name="password" placeholder="Password">
+        <input type="submit" value="Login">
+
+    </form>
+</div>
+{% endblock %}
+>>>>>>> 40ecbd468bbffe8ab1aee0c28e0edc8483235aa7

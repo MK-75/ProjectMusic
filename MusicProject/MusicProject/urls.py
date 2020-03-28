@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from Music import views
+from account import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('music/', include('Music.urls')),
+    path('acc/', include('account.urls')),
+    path('logout/',views.user_logout,name='logout'),
+
 ]
