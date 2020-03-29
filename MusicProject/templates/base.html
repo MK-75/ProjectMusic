@@ -33,7 +33,7 @@
           <li><a href="{% url 'admin:index' %}">Admin</a></li>
           <li><a href="{% url 'acc:register' %}">Register</a></li>
           {% if user.is_authenticated %}
-          <li><a href="{% url 'acc:logout' %}">Logout</a></li>
+          <li><a href="{% url 'acc:user_logout' %}">Logout</a></li>
           {% else %}
           <li><a href="{% url 'acc:user_login' %}">Login</a></li>
           {% endif %}

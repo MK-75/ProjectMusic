@@ -23,6 +23,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('music/', include('Music.urls')),
     path('acc/', include('account.urls')),
-    path('logout/', views.user_logout, name='logout'),
-    path('login/', views.user_login, name='login'),
+    path('logout/', views.user_logout, name='user_logout'),
+    path('login/', views.user_login, name='user_login'),
 ]

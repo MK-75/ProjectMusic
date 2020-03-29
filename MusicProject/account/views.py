@@ -3,6 +3,7 @@ from account.forms import UserForm
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 
 # Create your views here.
 
@@ -32,8 +33,8 @@ def register(request):
 
 def user_login(request):
     if request.method == 'POST':
-        username = request.POST('username')
-        password = request.POST('password')
+        username = request.POST['username']
+        password = request.POST['password']
 
         user = authenticate(username=username, password=password)
 
@@ -54,4 +55,4 @@ def user_login(request):
 @login_required
 def user_logout(request):
     logout(request)
-    return HttpResponseRedirect('index')
+    return HttpResponseRedirect(reverse('index'))
