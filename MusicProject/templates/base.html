@@ -2,42 +2,47 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SoundSooth</title>
-    
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-   
-</head>
-<body>
-    
-      <nav>
-        <div class="nav-wrapper">
-          <a href="{% url 'index' %}" class="brand-logo center">SoundSooth</a>
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="{% url 'admin:index' %}">Admin</a></li>
-            <li><a href="{% url 'register' %}">Register</a></li>
-            {% if user.is_authenticated %}
-            <li><a href="{% url 'logout' %}">Logout</a></li>
-            {% else %}
-            <li><a href="{% url 'user_login' %}">Login</a></li>
-            {% endif %}
-    
-          </ul>
-        </div>
-      </nav>
-            
-
-      <div class="container">
-          {% block body_block%}
-          {% endblock %}
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="{% url 'index' %}" class="brand-logo center">SoundSooth</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="{% url 'admin:index' %}">Admin</a></li>
+          <li><a href="{% url 'acc:register' %}">Register</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'acc:logout' %}">Logout</a></li>
+          {% else %}
+          <li><a href="{% url 'acc:user_login' %}">Login</a></li>
+          {% endif %}
+        </ul>
       </div>
-</body>
+    </nav>
+
+    <div class="container">
+      {% block body_block%} {% endblock %}
+    </div>
+  </body>
 </html>

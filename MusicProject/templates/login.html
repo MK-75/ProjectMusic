@@ -1,34 +1,15 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-  </head>
-  <body>
-    <h1>Login Here!</h1>
-    <form action="{% url 'music:user_login' %}" method="POST">
-      {% csrf_token %}
-      <input type="text" name="username" placeholder="username" />
-      <input type="password" name="password" placeholder="password" />
-      <input type="submit" name="Login" />
-    </form>
-  </body>
-</html>
-=======
-{% extends "base.html" %}
-{% block body_block %}
+{% extends "base.html" %} {% block body_block %}
 
 <div class="jumbotron">
-    <h1>Login</h1>
-    <form action="{% url 'userr_login' %}" method="POST">
-        {% csrf_token %}
-        Username:<input type="text" name="username" placeholder="Username">
-        Password:<input type="text" name="password" placeholder="Password">
-        <input type="submit" value="Login">
-
-    </form>
+  <h1>Login</h1>
+  <form action="{% url 'acc:user_login' %}" method="POST">
+    {% csrf_token %} Username:<input
+      type="text"
+      name="username"
+      placeholder="Username"
+    />
+    Password:<input type="text" name="password" placeholder="Password" />
+    <input type="submit" value="Login" />
+  </form>
 </div>
 {% endblock %}
->>>>>>> 40ecbd468bbffe8ab1aee0c28e0edc8483235aa7
