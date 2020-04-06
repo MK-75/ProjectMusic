@@ -11,4 +11,7 @@ This repo contains project on building a Music website using django framework.
 * Enter credentials if required
 * To run projecr create first virtual environment
 * Change directory to the name of the project i.e. MusicProject
+* Run python manage.py makemigrations (to get all the migrations)
+* Run python manage.py migrate (to apply the migrations)
+* <h4>If error in migration check your database in mysql!</h4>
 * Type command "python manage.py runserver"
