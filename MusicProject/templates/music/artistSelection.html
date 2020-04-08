@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block body_block %}
+  <div class="container">
+    <div class="row">
+      <div class="hover11 column">
+        <figure><img width="450" height="300" class="rounded mx-auto d-block" src="{% static "selection/hin.jpg" %}"
+            alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
+        <span>Hindi</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="hover11 column">
+
+        <figure><img width="450" height="300" class=" rounded mx-auto d-block" src="{% static "selection/Pun.jpg" %}"
+            alt="My image" name="kk" onclick="$(kk).imgCheckbox()" /></figure>
+            <span>Punjabi</span>
+      </div>
+    </div>
+  
+  <div class="row">
+    <div class="hover11 column">
+
+      <figure><img width="450" height="300" class=" rounded mx-auto d-block" src="{% static "selection/eng.jpg" %}"
+          alt="My image" name="k" onclick="$(k).imgCheckbox()"></figure>
+          <span>English</span>
+    </div>
+  </div>
+</div>
+{% endblock %}
