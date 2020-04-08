@@ -2,47 +2,180 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SoundSooth</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="{% url 'index' %}" class="brand-logo center">SoundSooth</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a href="{% url 'admin:index' %}">Admin</a></li>
-          <li><a href="{% url 'acc:register' %}">Register</a></li>
-          {% if user.is_authenticated %}
-          <li><a href="{% url 'acc:user_logout' %}">Logout</a></li>
-          {% else %}
-          <li><a href="{% url 'acc:user_login' %}">Login</a></li>
-          {% endif %}
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoundSooth</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="{% static 'css/select.css' %}" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  
+  <script>
+  $("img").imgCheckbox({
+    "styles": {
+        "span.imgCheckbox.imgChked img": {
+            // It's important to note that overriding the "filter" property will remove grayscaling
+            "filter": "blur(5px)",
+
+            // This is just css: remember compatibility
+            "-webkit-filter": "blur(5px)",
+
+            // Let's change the amount of scaling from the default of "0.8"
+            "transform": "scale(0.9)"
+        }
+    }
+});
+</script>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="{% url 'index' %}" class="brand-logo center">SoundSooth</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="{% url 'admin:index' %}">Admin</a></li>
+        <li><a href="{% url 'acc:register' %}">Register</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'acc:user_logout' %}">Logout</a></li>
+        {% else %}
+        <li><a href="{% url 'acc:user_login' %}">Login</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    {% block body_block%} {% endblock %}
+  </div>
+
+  <div class="container">
+
+
+
+    <div class="row">
+      <div class="hover11 column">
+        <figure><img width="450" height="300" class="rounded mx-auto d-block" src="{% static "selection/hin.jpg" %}"
+            alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
+        <span>Hindi</span>
       </div>
-    </nav>
+    </div>
+    <div class="row">
+      <div class="hover11 column">
+
+        <figure><img width="450" height="300" class=" rounded mx-auto d-block" src="{% static "selection/Pun.jpg" %}"
+            alt="My image" name="kk" onclick="$(kk).imgCheckbox()" /></figure>
+            <span>Punjabi</span>
+      </div>
+    </div>
+  
+  <div class="row">
+    <div class="hover11 column">
+
+      <figure><img width="450" height="300" class=" rounded mx-auto d-block" src="{% static "selection/eng.jpg" %}"
+          alt="My image" name="k" onclick="$(k).imgCheckbox()"></figure>
+          <span>English</span>
+    </div>
+  </div>
+
+
+</div>
+
+  <!-- Footer -->
+
+  <footer class="page-footer font-small unique-color-dark">
+
 
     <div class="container">
-      {% block body_block%} {% endblock %}
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+
+      </div>
+      <!-- Grid row-->
+
     </div>
-  </body>
+
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+      <!-- Grid row -->
+      <div class="row mt-3">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">SoundSooth</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>Let the Music Speak!</p>
+
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Products</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="#!">MDBootstrap</a>
+          </p>
+
+
+        </div>
+
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+
+          <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="#!">Your Account</a>
+          </p>
+
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+
+
+    </div>
+
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+
+  <!-- Footer -->
+
+</body>
+
 </html>
