@@ -1,3 +1,11 @@
-{% extends "music/base.html" %} {% block body_block %}
-<h1>Welcome to Home</h1>
+{% extends "base.html" %} 
+{% block body_block %}
+  {% comment %} <h1>Welcome to Home</h1>  {% endcomment %}
+  <p><h3><strong>{{ song }}<strong><h3></p>
+  <img src="{{ song.image.url }}">
+  <br>
+  <br>
+  <audio controls="controls">
+        <source src="{{ song.song_path.url }}" type="audio/mpeg" />
+  </audio>
 {% endblock %}
