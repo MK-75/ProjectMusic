@@ -6,14 +6,19 @@ from Music.models import *
 
 
 def home(request):
-    song = Song.objects.get(pk=4)
-    context = {'song': song}
+    album = Album.objects.all()
+    context = {'album': album}
     return render(request, 'music/home.html', context)
 
 
 # def index(request):
 #     # return HttpResponse('This is the landing page')
 #     return render(request, 'index.html')
+
+def specificAlbum(request, name):
+    album = Album.objects.get(album_name=name)
+    context = {'album': album}
+    return render(request, 'music/album.html', context)
 
 
 def browse(request):

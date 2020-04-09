@@ -74,7 +74,7 @@ class Artist(models.Model):
     singer = models.ForeignKey(Singer, on_delete=models.CASCADE)
 
     def __str__(self):
-        return "User %s: Artist %s" % (self.user.name, self.singer.singer_name)
+        return "User %s: Artist %s" % (self.user.username, self.singer.singer_name)
 
 
 class Favorites(models.Model):

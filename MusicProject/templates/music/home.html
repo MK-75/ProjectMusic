@@ -1,11 +1,28 @@
 {% extends "base.html" %} 
 {% block body_block %}
-  {% comment %} <h1>Welcome to Home</h1>  {% endcomment %}
-  <p><h3><strong>{{ song }}<strong><h3></p>
-  <img src="{{ song.image.url }}">
+  {% for albums in album %}
+    <img src="{{ albums.image.url }}">
+    <ul>
+      <li style="list-style-type:disc;"><h3>{{ albums.album_name }}</h3></li>
+    </ul>
+  {% endfor %}  
+  {% comment %} <img src="{{ song.image.url }}">
   <br>
   <br>
   <audio controls="controls">
         <source src="{{ song.song_path.url }}" type="audio/mpeg" />
-  </audio>
+  </audio> {% endcomment %}
+  
+  {% comment %} <div class="container">
+  <h2>SoundSooth</h2>
+  <section class="customer-logos slider">
+      <div class="slide"><img src="{{ song.image.url }}"></div>
+      <div class="slide"><img src="{{ song.image.url }}"></div>
+      <div class="slide"><img src="{{ song.image.url }}"></div>
+      <div class="slide"><img src="{{ song.image.url }}"></div>
+      <div class="slide"><img src="{{ song.image.url }}"></div>
+      <div class="slide"><img src="{{ song.image.url }}"></div>
+      <div class="slide"><img src="{{ song.image.url }}"></div>
+  </section> 
+  </div> {% endcomment %}
 {% endblock %}
