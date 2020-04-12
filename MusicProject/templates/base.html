@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SoundSooth</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" /> 
   <link rel="stylesheet" href="{% static 'css/select.css' %}" />
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
   <script src = "{% static "javascript/imageCheckBox.js" %}"></script>
@@ -64,7 +64,7 @@ a.sing {
     padding-top: 20px;
 	    font-family: 'MavenPro-Regular';
 }
-a.sing:hover{
+a.sing:hover,a.ll:hover{
  color:#EA57A3;
  text-decoration:none;
 }
@@ -78,6 +78,29 @@ h4.tittle.third {
 .browse-grid img:hover {
     opacity: 0.8;
 }
+.k{
+  border-radius: 50%;
+}
+.button{
+  margin-top: 10px;
+  border-radius: 15px;
+  border-color: white;
+}
+.jumbotron{
+  background-color: #444;
+}
+.col-sm-1,.ll{
+  color: white;
+}
+.col-md-3{
+  display: inline-block;
+  margin-left:-4px;
+}
+.col-md-3 img{
+  width:100%;
+  height:auto;
+}
+
 </style>
     
 </head>
@@ -112,6 +135,85 @@ h4.tittle.third {
 <br>
 <br>
 <br>
+
+
+<div class="jumbotron">
+  <div class="container-fluid">
+
+    <div class="row" >
+      <div style="margin-left:0px;">
+        <img src="{% static "images/rr.png" %}">
+      </div>
+      <div class="col-sm-1">
+        <h2 >Radio</h2>
+      <span>Pick a mood,song,artist.We'll play the perfect mix!</span>
+      </div>
+    
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      <div class="col-sm-1">
+        <div class="col-sm-1"></div>
+        <button type="button" class="btn btn-primary ">MORE STATIONS</button>
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ 
+
 
 <div class="browse">
   <div class="tittle-head two">
@@ -236,7 +338,7 @@ h4.tittle.third {
       <a class="sing" href="#">Zayn Malik</a>
   </div>
   <div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/v6.jpg" %}" title="allbum-name"></a>
+    <a  href="#"><img src="{% static "images/zayn.jpg" %}" title="allbum-name"></a>
      <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
       <a class="sing" href="#">Fifty Shades Of Grey</a>
   </div>
