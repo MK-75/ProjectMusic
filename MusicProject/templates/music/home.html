@@ -1,11 +1,12 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
+{% load static %} 
 {% block body_block %}
-  {% for albums in album %}
+  {% comment %} {% for albums in album %}
     <img src="{{ albums.image.url }}">
     <ul>
       <li style="list-style-type:disc;"><h3>{{ albums.album_name }}</h3></li>
     </ul>
-  {% endfor %} {% endcomment %}
+  {% endfor %}  {% endcomment %}
 	<link rel = "stylesheet" href = "{% static "css/homePage.css" %}">
   <div class="browse">
   <div class="tittle-head two">
