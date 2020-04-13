@@ -1,9 +1,8 @@
 {% extends "base.html" %} 
-{% load static %}
 {% block body_block %}
-  {% comment %} {% for albums in album %}
+  {% for albums in album %}
     <img src="{{ albums.image.url }}">
-    <ul>	
+    <ul>
       <li style="list-style-type:disc;"><h3>{{ albums.album_name }}</h3></li>
     </ul>
   {% endfor %} {% endcomment %}

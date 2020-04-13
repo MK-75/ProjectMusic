@@ -8,12 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SoundSooth</title>
 
-  {% comment %} -- CSS -- {% endcomment %}
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" /> 
   <link rel="stylesheet" href="{% static 'css/select.css' %}" />
+<<<<<<< HEAD
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -27,10 +24,101 @@
   <script type = "text/javascript" src = "{% static "javascript/imageCheckBox.js" %}"></script>
   <script type = "text/javascript" src = "{% static "javascript/crousel.js" %}"></script>
   <link rel="stylesheet" href="{% static "css/crousel.css" %}">
+=======
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+>>>>>>> 61889d86ba394be5bd47d3f02deb2cb1d8b4cff1
   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+  <script src = "{% static "javascript/imageCheckBox.js" %}"></script>
   {% comment %} <link rel="stylesheet" href="{% static "css/imageSlider.css" %}" />
   <script src="{% static "javascript/imageSlider.js" %}"></script> {% endcomment %}
+  
+  <style> 
+  
+   .col-md-3{
+    float: left;
+  }
+  .browse-grid {
+   width: 16.66%;
+    float: left;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.35);
+    margin-right: 0%;
+    margin-bottom: 2%;
+    position: relative;
+    padding-left: 0;
+}
+.browse-grid img {
+    width: 100%;
+	border-radius:0.3em;
+	-o-border-radius:0.3em;
+	-webkit-border-radius:0.3em;
+	-moz-border-radius:0.3em;
+}
+.browse-grid:nth-child(6),.browse-grid:nth-child(12) {
+    margin-left: 0%;
+}
+.browse {
+    padding: 1em 0 0 0;
+}
+i.fa.fa-play-circle-o {
+    position: absolute;
+    top:30%;
+    left: 40%;
+    color: #fff;
+    font-size: 3em;
+}
+a.sing {
+    color: #444;
+    font-size: 1.4em;
+    font-weight:400;
+    display: block;
+    padding-top: 20px;
+	    font-family: 'MavenPro-Regular';
+}
+a.sing:hover,a.ll:hover{
+ color:#EA57A3;
+ text-decoration:none;
+}
+.tittle-head.two {
+    margin-bottom: 1em;
+}
+h4.tittle.third {
+    float: right;
+    margin-right:1%;
+}
+.browse-grid img:hover {
+    opacity: 0.8;
+}
+.k{
+  border-radius: 50%;
+}
+.button{
+  margin-top: 10px;
+  border-radius: 15px;
+  border-color: white;
+}
+.jumbotron{
+  background-color: #444;
+}
+.col-sm-1,.ll{
+  color: white;
+}
+.col-md-3{
+  display: inline-block;
+  margin-left:-4px;
+}
+.col-md-3 img{
+  width:100%;
+  height:auto;
+}
 
+</style>
+    
 </head>
 
 <body>
@@ -65,6 +153,221 @@
 <br>
 
 
+<<<<<<< HEAD
+=======
+<div class="jumbotron">
+  <div class="container-fluid">
+
+    <div class="row" >
+      <div style="margin-left:0px;">
+        <img src="{% static "images/rr.png" %}">
+      </div>
+      <div class="col-sm-1">
+        <h2 >Radio</h2>
+      <span>Pick a mood,song,artist.We'll play the perfect mix!</span>
+      </div>
+    
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      <div class="col-sm-1">
+        <div class="col-sm-1"></div>
+        <button type="button" class="btn btn-primary ">MORE STATIONS</button>
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ 
+
+
+<div class="browse">
+  <div class="tittle-head two">
+    <h3 class="tittle">New Releses <span class="new">New</span></h3>
+    <a href="browse.html"><h4 class="tittle third">See all</h4></a>
+    <div class="clearfix"> </div>
+  </div>
+
+  <div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/alanc.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+    <a class="sing" href="#">Different World</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/katy.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Prism</a>
+  </div>
+<div class="col-md-3 browse-grid">
+  <a  href="#"><img src="{% static "images/true.jpg" %}" title="allbum-name"></a>
+   <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Avicii</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/imagine.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Evolve</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/v1.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Adele21</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/a10.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Sunidhi Chauhan</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/divideed.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Divide</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/loud.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+    <a class="sing" href="#">Loud</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/a9.jpg" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Arijit Singh</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/chain.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Shomlock</a>
+  </div>
+  <div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/duac.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Dua Lipa</a>
+  </div>
+  <div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/camilac.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Havana</a>
+  </div>
+        <div class="clearfix"> </div>
+    </div>
+
+
+<div class="browse">
+  <div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/a12.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+    <a class="sing" href="#">Mere Liye tum kafi ho<i class="fas fa-chess-king-alt    "></i></a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/harry.png" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Harry Styles</a>
+  </div>
+<div class="col-md-3 browse-grid">
+  <a  href="#"><img src="{% static "images/americanteen.jpg" %}" title="allbum-name"></a>
+   <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">American Teen</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/reputation.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Reputation</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/selenac.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Wolves</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/billic.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Bad Guy</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/v88.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Sam Smith</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/avicii.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+    <a class="sing" href="#">Avicii</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/12.jpg" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Pritam</a>
+  </div>
+<div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/zayn.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Zayn Malik</a>
+  </div>
+  <div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/zayn.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Fifty Shades Of Grey</a>
+  </div>
+  <div class="col-md-3 browse-grid">
+    <a  href="#"><img src="{% static "images/nialc.jpg" %}" title="allbum-name"></a>
+     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+      <a class="sing" href="#">Niall Horan</a>
+  </div>
+        <div class="clearfix"> </div>
+    </div>
+>>>>>>> 61889d86ba394be5bd47d3f02deb2cb1d8b4cff1
 
 
     

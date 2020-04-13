@@ -16,7 +16,7 @@ def home(request):
 #     return render(request, 'index.html')
 
 def specificAlbum(request, name):
-    album = Album.objects.get(album_name = name)
+    album = Album.objects.get(album_name=name)
     context = {'album': album}
     return render(request, 'music/album.html', context)
 
