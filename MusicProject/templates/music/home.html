@@ -17,7 +17,7 @@
 
 	{% for albums in album %}
   <div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{{ albums.image.url }}" title="allbum-name"></a>
+    <a href="{% url "music:specificAlbum" albums.album_name %}"><img src="{{ albums.image.url }}" title="allbum-name"></a>
     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
     <a class="sing" href="#">{{ albums.album_name }}</a>
   </div>
