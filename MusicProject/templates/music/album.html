@@ -1,5 +1,13 @@
 {% extends "base.html" %}
 {% block body_block %}
   <h1>This will display songs of {{ album.album_name }}</h1>
-  <h2>{{ album.song_set.all }}</h2>
+  {% comment %} <h2>{{ album.song_set.all }}</h2> {% endcomment %}
+  <ul>
+  {% for song in album.song_set.all %}
+    <li>{{ song.songName }}</li>
+  <audio controls>
+    <source src="{{ song.song_path.url }}" type="audio/mpeg">
+  </audio>
+  {% endfor %}
+  </ul>
 {% endblock %}
