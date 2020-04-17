@@ -15,9 +15,10 @@ def home(request):
 #     # return HttpResponse('This is the landing page')
 #     return render(request, 'index.html')
 
-def specificAlbum(request, name):
+def specificAlbum(request,name):
     album = Album.objects.get(album_name=name)
-    context = {'album': album}
+    songs=Song.objects.all()
+    context = {'album': album,'songs':songs}
     return render(request, 'music/album.html', context)
 
 

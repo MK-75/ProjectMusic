@@ -7,7 +7,7 @@
       <li style="list-style-type:disc;"><h3>{{ albums.album_name }}</h3></li>
     </ul>
   {% endfor %}  {% endcomment %}
-	<link rel = "stylesheet" href = "{% static "css/homePage.css" %}">
+	<link rel = "stylesheet" href = "{% static 'css/homePage.css' %}">
   <div class="browse">
   <div class="tittle-head two">
     <h3 class="tittle">New Releases </h3>
@@ -17,132 +17,12 @@
 
 	{% for albums in album %}
   <div class="col-md-3 browse-grid">
-    <a href="{% url "music:specificAlbum" albums.album_name %}"><img src="{{ albums.image.url }}" title="allbum-name"></a>
-    <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
+    <a href="{% url 'music:specificAlbum' albums.album_name %}"><img src="{{ albums.image.url }}" title="allbum-name"></a>
+    <a href="{% url 'music:specificAlbum' albums.album_name %}"><i class="fa fa-play-circle-o" style="font-size:60px;"></i></a>
     <a class="sing" href="#">{{ albums.album_name }}</a>
   </div>
 	{% endfor %}
-	<div class="clearfix"> </div>
-{% comment %} <div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/katy.jpg" %}" title="allbum-name"></a>
-    <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-    <a class="sing" href="#">Katy Perry</a>
+  <div class="clearfix"> </div>
   </div>
-<div class="col-md-3 browse-grid">
-  <a  href="#"><img src="{% static "images/true.jpg" %}" title="allbum-name"></a>
-  <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-  <a class="sing" href="#">Avicii</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/imagine.jpg" %}" title="allbum-name"></a>
-    <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-    <a class="sing" href="#">Imagine Dragon's</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/v1.jpg" %}" title="allbum-name"></a>
-    <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Adele21</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/a10.jpg" %}" title="allbum-name"></a>
-    <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Sunidhi Chauhan</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/divideed.jpg" %}" title="allbum-name"></a>
-    <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Divide</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/loud.jpg" %}" title="allbum-name"></a>
-    <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-    <a class="sing" href="#">Loud</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/a9.jpg" %}" title="allbum-name"></a>
-    <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-    <a class="sing" href="#">Arijit Singh</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/chain.jpg" %}" title="allbum-name"></a>
-     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Shomlock</a>
-  </div>
-  <div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/duac.jpg" %}" title="allbum-name"></a>
-     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Dua Lipa</a>
-  </div>
-  <div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/camilac.jpg" %}" title="allbum-name"></a>
-     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Havana</a>
-  </div>
-        <div class="clearfix"> </div>
-    </div>
 
-
-<div class="browse">
-  <div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/a12.jpg" %}" title="allbum-name"></a>
-     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-    <a class="sing" href="#">Mere Liye tum kafi ho<i class="fas fa-chess-king-alt    "></i></a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/harry.png" %}" title="allbum-name"></a>
-     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Harry Styles</a>
-  </div>
-<div class="col-md-3 browse-grid">
-  <a  href="#"><img src="{% static "images/americanteen.jpg" %}" title="allbum-name"></a>
-   <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">American Teen</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/reputation.jpg" %}" title="allbum-name"></a>
-     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Reputation</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/selenac.jpg" %}" title="allbum-name"></a>
-     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Wolves</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/billic.jpg" %}" title="allbum-name"></a>
-     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Bad Guy</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/v88.jpg" %}" title="allbum-name"></a>
-     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Sam Smith</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/avicii.jpg" %}" title="allbum-name"></a>
-     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-    <a class="sing" href="#">Avicii</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/12.jpg" %}" title="allbum-name"></a>
-     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Pritam</a>
-  </div>
-<div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/zayn.jpg" %}" title="allbum-name"></a>
-     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Zayn Malik</a>
-  </div>
-  <div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/v6.jpeg" %}" title="allbum-name"></a>
-     <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-      <a class="sing" href="#">Fifty Shades Of Grey</a>
-  </div>
-  <div class="col-md-3 browse-grid">
-    <a  href="#"><img src="{% static "images/nialc.jpg" %}" title="allbum-name"></a>
-    <a href="#"><i class="fa fa-play-circle-o" style="font-size:100px;"></i></a>
-    <a class="sing" href="#">Niall Horan</a>
-  </div>
-        <div class="clearfix"> </div>
-  </div> {% endcomment %}
 {% endblock %}

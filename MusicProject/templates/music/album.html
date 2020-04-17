@@ -1,5 +1,41 @@
 {% extends "base.html" %}
 {% block body_block %}
-  <h1>This will display songs of {{ album.album_name }}</h1>
-  <h2>{{ album.song_set.all }}</h2>
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/audioplayer.css' %}" />
+<!-- <script type="text/javascript" src="{% static 'javascript/audio.js' %}"></script> -->
+<br>
+<br>
+<br>
+<hr>
+<div class="container">
+    <div class="row">
+    <div class="col-sm-2">
+        <img class="k" src="{{ album.image.url }}" title="allbum-name">
+    </div>
+    <div class="float-sm-left d">{{ album.album_name }}</div>
+</div>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-1"><h8>#</h8></div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-4"><h8>TITLE</h8></div>
+        <div class="col-sm-4"><h8>ARTIST</h8></div>
+    </div>
+    <hr>
+    {% for song in album.song_set.all %}
+    <div class="row">
+        <div class="col-sm-1"><img  class="l" src="{{ song.image.url }}" title="allbum-name"></div>
+        <div class="col-sm-1"><i class="far fa-heart" style="font-size:18px;"></i> </div>
+        <div class="col-sm-4"><h8>{{song.songName}}</h8></div>
+    </div>
+    <hr>
+    {% endfor %}
+    
+    
+</div>
+
+
 {% endblock %}

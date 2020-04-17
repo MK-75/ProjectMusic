@@ -26,7 +26,7 @@ class Album(models.Model):
     #genre_id = models.ForeignKey(Genre, on_delete=models.CASCADE)
     #song_id = models.ForeignKey(Song, on_delete=models.CASCADE)
     image = models.FileField(upload_to="images/songs", null=True)
-    genre = models.OneToOneField(Genre, on_delete=models.CASCADE, null=True)
+    genre = models.ManyToManyField(Genre)
     album_name = models.CharField(max_length=100)
     total_tracks = models.IntegerField()
 
