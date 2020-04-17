@@ -1,58 +1,59 @@
 {% extends "base.html" %}
+{% load static %}
 {% block body_block %}
 <div class="container">
+    <h3>Select Your favourite artists</h3>
     <div class="row">
-      <div class=" col-sm-4">
-        <figure><img width="270" height="270" class="rounded-circle mx-auto d-block" src="{% static "bollywood/arijit.jpg" %}"
+        <div class=" col-sm-4">
+            <figure><img width="170" height="170" class="rounded-circle mx-auto d-block" src="{% static "bollywood/arijit.jpg" %}"
             alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
             <div style="text-align: center;"><span>Arijit Singh</span></div>
-      </div>
-      
-      <div class=" col-sm-4">
-        <figure><img width="270" height="270" class="rounded-circle mx-auto d-block" src="{% static "bollywood/neha.jpg" %}"
+        </div>
+        <div class=" col-sm-4">
+            <figure><img width="170" height="170" class="rounded-circle mx-auto d-block" src="{% static "bollywood/neha.jpg" %}"
             alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
             <div style="text-align: center;"><span>Neha Kakkar</span></div>
-      </div>
-      <div class=" col-sm-4">
-        <figure><img width="270" height="270" class="rounded-circle mx-auto d-block" src="{% static "bollywood/kk.jpg" %}"
+        </div>
+        <div class=" col-sm-4">
+            <figure><img width="170" height="170" class="rounded-circle mx-auto d-block" src="{% static "bollywood/kk.jpg" %}"
             alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
             <div style="text-align: center;"><span>Kanika Kapoor</span></div>
-      </div>
+        </div>
     </div>
     <div class="row">
-      <div class=" col-sm-4">
-        <figure><img width="270" height="270" class="rounded-circle mx-auto d-block" src="{% static "bollywood/darshan.jpg" %}"
+        <div class=" col-sm-4">
+            <figure><img width="170" height="170" class="rounded-circle mx-auto d-block" src="{% static "bollywood/darshan.jpg" %}"
             alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
             <div style="text-align: center;"><span >Darshan Raval</span></div>
-      </div>
-      <div class=" col-sm-4">
-        <figure><img width="270" height="270" class="rounded-circle mx-auto d-block" src="{% static "bollywood/shreya.jpg" %}"
+        </div>
+        <div class=" col-sm-4">
+            <figure><img width="170" height="170" class="rounded-circle mx-auto d-block" src="{% static "bollywood/shreya.jpg" %}"
             alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
             <div style="text-align: center;"><span>Shreya Ghoshal</span></div>
-      </div>
-      <div class=" col-sm-4">
-        <figure><img width="270" height="270" class="rounded-circle mx-auto d-block" src="{% static "bollywood/benny.jpg" %}"
+        </div>
+        <div class=" col-sm-4">
+            <figure><img width="170" height="170" class="rounded-circle mx-auto d-block" src="{% static "bollywood/benny.jpg" %}"
             alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
             <div style="text-align: center;"><span>Benny Dayal</span></div>
-      </div>
+        </div>
     </div>
-  
-  <div class="row">
-    <div class=" col-sm-4">
-      <figure><img width="270" height="270" class="rounded-circle mx-auto d-block" src="{% static "bollywood/sonu.jpg" %}"
-          alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
-          <div style="text-align: center;"><span>Sonu Nigam</span></div>
+    <div class="row">
+        <div class=" col-sm-4">
+            <figure><img width="170" height="170" class="rounded-circle mx-auto d-block" src="{% static "bollywood/sonu.jpg" %}"
+            alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
+            <div style="text-align: center;"><span>Sonu Nigam</span></div>
+        </div>
+        <div class=" col-sm-4">
+            <figure><img width="170" height="170" class="rounded-circle mx-auto d-block" src="{% static "bollywood/ar.jpg" %}"
+            alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
+            <div style="text-align: center;"><span>A.R Rehman</span></div>
+        </div>
+        <div class=" col-sm-4">
+            <figure><img width="170" height="170" class="rounded-circle mx-auto d-block" src="{% static "bollywood/amitjpg.jpg" %}"
+            alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
+            <div style="text-align: center;"><span>Amit Trivedi</span></div>
+        </div>
     </div>
-    <div class=" col-sm-4">
-      <figure><img width="270" height="270" class="rounded-circle mx-auto d-block" src="{% static "bollywood/ar.jpg" %}"
-          alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
-          <div style="text-align: center;"><span>A.R Rehman</span></div>
-    </div>
-    <div class=" col-sm-4">
-      <figure><img width="270" height="270" class="rounded-circle mx-auto d-block" src="{% static "bollywood/amitjpg.jpg" %}"
-          alt="My image"  name="kkk" onclick="$(kkk).imgCheckbox()" /></figure>
-          <div style="text-align: center;"><span>Amit Trivedi</span></div>
-    </div>
-  </div>
-  </div>
+    <a class="btn btn-primary btn-lg" href="{% url "music:home" %}" role="button">Next</a>
+</div>
   {% endblock %}

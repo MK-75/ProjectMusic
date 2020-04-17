@@ -1,5 +1,8 @@
 from django.urls import path
 from account import views
+from django.urls import reverse, reverse_lazy
+from django.views.generic.edit import CreateView
+from account.forms import UserForm
 
 app_name = 'acc'
 
