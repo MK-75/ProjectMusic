@@ -1,6 +1,54 @@
 {% extends "base.html" %}
 {% load static %} 
 {% block body_block %}
+
+<link rel="stylesheet" href="{% static 'css/homePage.css' %}" />
+
+
+  <div class="container">
+
+    <div class="row" >
+      <div style="margin-left:0px;">
+        <img src="{% static 'images/rr.png' %}">
+      </div>
+      <div class="col-sm-1">
+        <h2 >Radio</h2>
+      <span>Pick a mood,song,artist.We'll play the perfect mix!</span>
+      </div>
+  
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      
+      <div class="col-sm-1">
+        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a class="ll" href="#">Different World</a>
+      </div>
+      <div class="col-sm-1">
+        <div class="col-sm-1"></div>
+        <button type="button" class="btn btn-primary ">MORE STATIONS</button>
+      </div>
+      
+
+    </div>
+  </div>
+
+
+
   {% comment %} {% for albums in album %}
     <img src="{{ albums.image.url }}">
     <ul>
@@ -18,7 +66,7 @@
 	{% for albums in album %}
   <div class="col-md-3 browse-grid">
     <a href="{% url 'music:specificAlbum' albums.album_name %}"><img src="{{ albums.image.url }}" title="allbum-name"></a>
-    <a href="{% url 'music:specificAlbum' albums.album_name %}"><i class="fa fa-play-circle-o" style="font-size:60px;"></i></a>
+    <a href="{% url 'music:specificAlbum' albums.album_name %}"><i class="far fa-play-circle" style="font-size:60px;"></i></a>
     <a class="sing" href="#">{{ albums.album_name }}</a>
   </div>
 	{% endfor %}

@@ -18,16 +18,8 @@ width:30px;
 height: 30px;
 
 }
-#cs_audioplayer {
-    background-color: #f5a2a2;
-    color: #000;
-}
-.cs_audio_bar {
-    background-color: #000;
-  }
-  .cs_audio_bar_loaded {
-    background-color: #777;
-  }
-  .cs_audio_bar_now {
-    background-color: green;
-  }
+.far.fa-heart.liked ::hover{
+        color:#ff749f;}
+        
+        
+       
