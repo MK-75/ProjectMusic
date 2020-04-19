@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="{% static 'css/homePage.css' %}" />
 
-
+<div class="jumbotron">
   <div class="container">
 
     <div class="row" >
@@ -15,29 +15,21 @@
         <h2 >Radio</h2>
       <span>Pick a mood,song,artist.We'll play the perfect mix!</span>
       </div>
-  
+      <div class="col-sm-1"></div>
       <div class="col-sm-1">
-        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a  href="#"><img src="{% static 'images/true.jpg' %}" class="k" alt="Avatar" style="width:100px"></a>
         <a class="ll" href="#">Different World</a>
       </div>
+      <div class="col-sm-1"></div>
       <div class="col-sm-1">
-        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a  href="#"><img src="{% static 'images/true.jpg' %}" class="k" alt="Avatar" style="width:100px"></a>
         <a class="ll" href="#">Different World</a>
       </div>
-      
+      <div class="col-sm-1"></div>
       <div class="col-sm-1">
-        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
+        <a  href="#"><img src="{% static 'images/true.jpg' %}" class="k" alt="Avatar" style="width:100px"></a>
         <a class="ll" href="#">Different World</a>
-      </div>
-      <div class="col-sm-1">
-        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
-        <a class="ll" href="#">Different World</a>
-      </div>
-      
-      <div class="col-sm-1">
-        <a  href="#"><img src="{% static "images/true.jpg" %}" class="k" alt="Avatar" style="width:100px"></a>
-        <a class="ll" href="#">Different World</a>
-      </div>
+      </div> 
       <div class="col-sm-1">
         <div class="col-sm-1"></div>
         <button type="button" class="btn btn-primary ">MORE STATIONS</button>
@@ -46,6 +38,7 @@
 
     </div>
   </div>
+</div>
 
 
 
@@ -67,7 +60,7 @@
   <div class="col-md-3 browse-grid">
     <a href="{% url 'music:specificAlbum' albums.album_name %}"><img src="{{ albums.image.url }}" title="allbum-name"></a>
     <a href="{% url 'music:specificAlbum' albums.album_name %}"><i class="far fa-play-circle" style="font-size:60px;"></i></a>
-    <a class="sing" href="#">{{ albums.album_name }}</a>
+    <a class="sing' href="#">{{ albums.album_name }}</a>
   </div>
 	{% endfor %}
   <div class="clearfix"> </div>
