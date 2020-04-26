@@ -30,4 +30,6 @@ def browse(request):
 
 
 def radio(request):
-    return render(request, 'music/radio.html')
+    singer = Singer.objects.all()
+    context = {'singer': singer}
+    return render(request, 'music/radio.html',context)

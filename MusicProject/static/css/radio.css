@@ -1,0 +1,29 @@
+.col-md-3 {
+    float: left;
+  }
+  
+  div.polaroid {
+    width: 165px;
+    background-color:white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+  }
+  
+  .cap {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgb(114, 111, 111);
+    color: white;
+  }
+  img{
+    width: 165px;
+    height: 155px;
+  }
+  i.far.fa-play-circle {
+    margin-top: 10px;
+    position: absolute;
+    top: 21%;
+    left: 36%;
+    color: #fff;
+    font-size: 3em;
+  }
