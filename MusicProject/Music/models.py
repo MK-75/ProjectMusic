@@ -54,7 +54,7 @@ class Singer(models.Model):
     total_albums = models.IntegerField()
     songs = models.ManyToManyField(Song)
     image = models.FileField(upload_to="images/singer", null=True)
-
+    album=models.ManyToManyField(Album)
     def __str__(self):
         return self.singer_name
 

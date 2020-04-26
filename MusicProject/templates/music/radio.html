@@ -38,4 +38,27 @@
   </div>
 </div>
 
+
+
+<link rel="stylesheet" href="{% static 'css/radio.css' %}" />
+<div class="container">
+    <div class="row">
+        {% for singers in singer %}
+        <div class="col-md-2">
+            <div class="polaroid">
+                <img src="{{singers.image.url}}" alt="5 Terre">
+                <i class="far fa-play-circle" style="font-size:60px;"></i>
+                <div class="container cap">
+                <p>{{album.album_name}}</p>
+                </div>
+              </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
 {% endblock %}
