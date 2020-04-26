@@ -61,7 +61,7 @@ class Singer(models.Model):
 
 
 class Playlist(models.Model):
-    id = models.CharField(max_length=10, primary_key=True)
+    #id = models.CharField(max_length=10, primary_key=True)
     playlist_name = models.CharField(max_length=30)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     songs = models.ManyToManyField(Song)

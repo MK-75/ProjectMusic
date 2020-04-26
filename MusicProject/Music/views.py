@@ -43,12 +43,11 @@ def createPlaylist(request):
         my_name = request.POST['playlistName']
         my_songs = request.POST.getlist('songList')
         current_user = request.user
-        playlist = Playlist(user=current_user, playlist_name=my_name)
-
+        playlist = Playlist.objects.create(
+            user=current_user, playlist_name=my_name)
         for name in my_songs:
             selectedSong = Song.objects.get(songName=name)
             playlist.songs.add(selectedSong)
-            playlist.save()
 
         # my_s = request.POST.get('song_name', '')
         # my_songs = Song.objects.get(songName=my_s)
