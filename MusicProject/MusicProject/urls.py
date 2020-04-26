@@ -26,8 +26,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('music/', include('Music.urls')),
     path('acc/', include('account.urls')),
-    path('logout/', views.user_logout, name='user_logout'),
-    path('login/', views.user_login, name='user_login'),
+    path('user_logout/', views.user_logout, name='user_logout'),
+    path('user_login/', views.user_login, name='user_login'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

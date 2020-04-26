@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block body_block %}
+  <h2>Add your songs form the below choices</h2>
+  <form action="{% url "music:createPlaylist" %}" method = "POST">
+  {% csrf_token %}
+  <input type="text" name="playlistName">
+  <label for="playlistName">Enter playlist name: </label></br>
+  {% for song in songs %}
+    <input type="checkbox" id="{{ song.id }}" name="songList" value="{{ song.songName }}" >
+    <label for="{{ song.songName }}">{{ song.songName }}</label><br>
+    {% comment %} <img src="{{ song.image.url }}"></br> {% endcomment %}
+  {% endfor %}
+  <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+
+<script>
+  $('input[name = "songList"]').click(function(){
+    //data['checked'] = $(this).value()
+    data['song_name'] =  $(this).text()
+    $.ajax({
+      url: "music/MyMusic/CreatePlaylist",
+      type: 'POST',
+      data: data
+    });
+  });
+</script>
+{% endblock body_block %}

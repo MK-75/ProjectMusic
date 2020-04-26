@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block body_block %}
+<h1>Create Your play list</h1>
+<a href="{% url "music:createPlaylist" %}" class="btn btn-secondary btn-lg" role="button" aria-pressed="true">Create Playlist</a>
+<h1>Your created playlist will be displayed below<h1>
+{% endblock body_block %}

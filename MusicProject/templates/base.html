@@ -14,10 +14,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  
   {% comment %} SCRIPT {% endcomment %}
   <script src="{% static 'javascript/imageCheckBox.js' %}"></script>
   <script type="text/javascript" src="{% static 'javascript/imageCheckBox.js' %}"></script>
@@ -28,10 +24,9 @@
 </head>
 
 <body>
-  
 
- <!--Navbar-->
- <div class="container-fluid" style="background-color:rgb(20, 20, 49);">
+<!--Navbar-->
+<div class="container-fluid" style="background-color:rgb(20, 20, 49);">
   <nav class="navbar navbar-expand-lg navbar-dark indigo">
     <a class="navbar-brand" href="{% url 'index' %}" >SoundSooth</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
@@ -46,14 +41,14 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Radio</a>
+        <a class="nav-link" href="{% url 'music:radio' %}">Radio</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Browse</a>
-      </li>
+      {% comment %} <li class="nav-item">
+        <a class="nav-link" href="{% url 'music:browse' %}">Browse</a>
+      </li> {% endcomment %}
       
       <li class="nav-item">
-        <a class="nav-link" href="#">My Music</a>
+        <a class="nav-link" href="{% url 'music:myMusic' %}">My Music</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
@@ -80,7 +75,7 @@
           <a class="dropdown-item" href="#">My account</a>
           <a class="dropdown-item"  href="{% url 'acc:user_logout' %}">Log out</a>
           
-           {% else %}
+          {% else %}
           <a class="dropdown-item" href="{% url 'acc:user_login' %}">Login</a>
           <a  class="dropdown-item" href="{% url 'acc:register' %}">Register</a>
         {% endif %}
@@ -106,7 +101,7 @@
     <br>
     <br>
     <br>
-
+  {% comment %} Footer {% endcomment %}
     <footer class="footer">
       <div class="footer__addr">
         <h1 class="footer__logo">SoundSooth</h1>
