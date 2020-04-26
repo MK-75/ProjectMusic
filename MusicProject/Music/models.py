@@ -54,13 +54,14 @@ class Singer(models.Model):
     total_albums = models.IntegerField()
     songs = models.ManyToManyField(Song)
     image = models.FileField(upload_to="images/singer", null=True)
-    album=models.ManyToManyField(Album)
+    album = models.ManyToManyField(Album)
+
     def __str__(self):
         return self.singer_name
 
 
 class Playlist(models.Model):
-    #playlist_id = models.CharField(max_length=10, primary_key=True)
+    id = models.CharField(max_length=10, primary_key=True)
     playlist_name = models.CharField(max_length=30)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     songs = models.ManyToManyField(Song)

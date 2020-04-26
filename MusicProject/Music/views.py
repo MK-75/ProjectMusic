@@ -39,15 +39,26 @@ def createPlaylist(request):
     songs = Song.objects.all()
     context = {'songs': songs}
     if request.method == "POST":
-        my_s = request.POST.get('song_name', '')
-        my_songs = Song.objects.get(songName=my_s)
-        my_name = request.POST('playlistName')
+        # my_id = my_id + 1
+        my_name = request.POST['playlistName']
+        my_songs = request.POST.getlist('songList')
         current_user = request.user
-        playlist = Playlist(id=1, user=current_user,
-                            playlist_name=my_name)
-        playlist.songs.add(my_songs)
-        playlist.save()
-        return HttpResponse('Your playlist is successfully created')
+        playlist = Playlist(user=current_user, playlist_name=my_name)
+
+        for name in my_songs:
+            selectedSong = Song.objects.get(songName=name)
+            playlist.songs.add(selectedSong)
+            playlist.save()
+
+        # my_s = request.POST.get('song_name', '')
+        # my_songs = Song.objects.get(songName=my_s)
+        # my_name = request.POST('playlistName')
+        # current_user = request.user
+        # playlist = Playlist(id=1, user=current_user,
+        #                     playlist_name=my_name)
+        # playlist.songs.add(my_songs)
+        # playlist.save()
+        # return HttpResponse(my_songs)
 
     return render(request, 'music/createPlaylist.html', context)
 
@@ -59,4 +70,4 @@ def browse(request):
 def radio(request):
     singer = Singer.objects.all()
     context = {'singer': singer}
-    return render(request, 'music/radio.html',context)
+    return render(request, 'music/radio.html', context)
