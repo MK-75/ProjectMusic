@@ -6,7 +6,7 @@
 <h1>Your created playlist will be displayed below<h1>
        
         <div class="container">
-            {% if len(playlist)!=0 %}
+            {% comment %} {% if len(playlist)!=0 %} {% endcomment %}
             {% for playlists in playlist %}
             <div class="row" style="width: 100%;display: table;"></div>
             <div class="col-md-2">
@@ -19,7 +19,7 @@
                             engineer</p>
                         <a href="{% url 'music:playlistdetails'  playlists.playlist_name %}" class="btn btn-primary">View Details</a>
             
-                        <form action="{% url 'music:deletePlaylist' playlists.playlist_name %}" method="post" style="display: inline;">
+                        <form action="{% url 'music:deletePlaylist' playlists.id %}" method="post" style="display: inline;">
                             {% csrf_token %}
                
                             <button type="submit" class="btn btn-success btn-xs">
@@ -31,7 +31,7 @@
 
             </div>
             {% endfor %}
-            {% endif %}
+            {% comment %} {% endif %} {% endcomment %}
         </div>
         
        
