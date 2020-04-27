@@ -21,7 +21,7 @@
             
                         <form action="{% url 'music:deletePlaylist' playlists.playlist_name %}" method="post" style="display: inline;">
                             {% csrf_token %}
-            
+               
                             <button type="submit" class="btn btn-success btn-xs">
                                 <i class='fas fa-trash-alt' style='font-size:30px'></i>
                             </button>
