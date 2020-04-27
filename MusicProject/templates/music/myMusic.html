@@ -1,6 +1,38 @@
 {% extends "base.html" %}
 {% block body_block %}
 <h1>Create Your play list</h1>
-<a href="{% url "music:createPlaylist" %}" class="btn btn-secondary btn-lg" role="button" aria-pressed="true">Create Playlist</a>
+<a href="{% url 'music:createPlaylist' %}" class="btn btn-secondary btn-lg" role="button" aria-pressed="true">Create
+    Playlist</a>
 <h1>Your created playlist will be displayed below<h1>
-{% endblock body_block %}
+       
+        <div class="container">
+            {% if len(playlist)!=0 %}
+            {% for playlists in playlist %}
+            <div class="row" style="width: 100%;display: table;"></div>
+            <div class="col-md-2">
+
+                <div class="card" style="width:300px ;">
+                    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">{{playlists.playlist_name}}</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and
+                            engineer</p>
+                        <a href="{% url 'music:playlistdetails'  playlists.playlist_name %}" class="btn btn-primary">View Details</a>
+            
+                        <form action="{% url 'music:deletePlaylist' playlists.playlist_name %}" method="post" style="display: inline;">
+                            {% csrf_token %}
+            
+                            <button type="submit" class="btn btn-success btn-xs">
+                                <i class='fas fa-trash-alt' style='font-size:30px'></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+        
+       
+        {% endblock body_block %}

@@ -27,11 +27,30 @@ def specificAlbum(request, name):
     context = {'album': album, 'songs': songs}
     return render(request, 'music/album.html', context)
 
+def playlistdetails(request,name):
+    playlist=Playlist.objects.get(playlist_name=name)
+   
+    context = {'playlist':playlist}
+    return render(request, 'music/albumDetails.html', context)
 
+    
 def myMusic(request):
     songs = Song.objects.all()
-    context = {'songs': songs}
+    current_user=request.user
+    playlist=Playlist.objects.filter(user=current_user)
+    context = {'songs': songs,'playlist':playlist}
     return render(request, 'music/myMusic.html', context)
+
+def deletePlaylist(request,name):
+    playlist=Playlist.objects.get(playlist_name=name)
+    playlist.delete()
+    p=Playlist.objects.all() 
+    context = {'p':p}
+    return render(request,'music/myMusic.html',context)
+
+
+
+
 
 
 @login_required
@@ -43,8 +62,7 @@ def createPlaylist(request):
         my_name = request.POST['playlistName']
         my_songs = request.POST.getlist('songList')
         current_user = request.user
-        playlist = Playlist.objects.create(
-            user=current_user, playlist_name=my_name)
+        playlist = Playlist.objects.create(user=current_user, playlist_name=my_name)
         for name in my_songs:
             selectedSong = Song.objects.get(songName=name)
             playlist.songs.add(selectedSong)

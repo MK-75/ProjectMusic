@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block body_block %}
+<script>
+    $(document).ready(function () {
+        $('nav a').click(function () {
+            $('nav a').removeClass("active");
+            $(this).addClass("active");
+        });
+    }); 
+</script>
+<div class="container-fluid songs-container">
+<br>
+<br>
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <img src="{{ playlist.songs.all.0.image.url }}" class="img-responsive" alt="hola">
+
+                    <h1>{{ playlist.playlist_name }}
+                </div>
+            </div>
+        </div>
+      
+        <div class="col-sm-8 col-md-9">
+            <button class="btn btn-primary">View All</button>
+            <a href=""><button class="btn btn-primary">Add New song</button></a>
+            <br>
+            <br>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>All Songs</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Audio File</th>
+
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for song in playlist.songs.all %}
+                            <tr>
+                                <td>{{ song.songName }}</td>
+                                <td>
+                                    <a target="_blank" href="{{ song.song_path.url }}">
+                                        <button type="button" class="btn btn-success btn-xs">
+                                            <i class="fa fa-play" style="font-size:15px;"></i> Play
+                                        </button>
+                                    </a>
+                                </td>
+
+                                <td>
+
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
