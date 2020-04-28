@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 from Music.models import *
 from django.contrib.auth.decorators import login_required
 
@@ -28,6 +29,15 @@ def specificAlbum(request, name):
     return render(request, 'music/album.html', context)
 
 
+def playlistSongDelete(request, name, id):
+    playlist = Playlist.objects.get(playlist_name=name)
+    song = playlist.songs.all()
+    song_to_delete = song.get(id=id)
+    playlist.songs.remove(song_to_delete)
+    context = {'playlist': playlist}
+    return HttpResponseRedirect(reverse('music:playlistdetails', kwargs={'name': playlist.playlist_name}))
+
+
 def playlistdetails(request, name):
     playlist = Playlist.objects.get(playlist_name=name)
     context = {'playlist': playlist}
@@ -47,7 +57,7 @@ def deletePlaylist(request, id):
     playlist.delete()
     p = Playlist.objects.all()
     context = {'p': p}
-    return render(request, 'music/myMusic.html', context)
+    return HttpResponseRedirect(reverse('music:myMusic'))
 
 
 @login_required
@@ -55,7 +65,6 @@ def createPlaylist(request):
     songs = Song.objects.all()
     context = {'songs': songs}
     if request.method == "POST":
-        # my_id = my_id + 1
         my_name = request.POST['playlistName']
         my_songs = request.POST.getlist('songList')
         current_user = request.user
@@ -64,16 +73,7 @@ def createPlaylist(request):
         for name in my_songs:
             selectedSong = Song.objects.get(songName=name)
             playlist.songs.add(selectedSong)
-
-        # my_s = request.POST.get('song_name', '')
-        # my_songs = Song.objects.get(songName=my_s)
-        # my_name = request.POST('playlistName')
-        # current_user = request.user
-        # playlist = Playlist(id=1, user=current_user,
-        #                     playlist_name=my_name)
-        # playlist.songs.add(my_songs)
-        # playlist.save()
-        # return HttpResponse(my_songs)
+        return HttpResponseRedirect(reverse('music:myMusic'))
 
     return render(request, 'music/createPlaylist.html', context)
 

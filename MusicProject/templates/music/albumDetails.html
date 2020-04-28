@@ -50,6 +50,11 @@
                                             <i class="fa fa-play" style="font-size:15px;"></i> Play
                                         </button>
                                     </a>
+                                    <a href="{% url 'music:playlistSongDelete' playlist.playlist_name song.id %}">
+                                        <button type="submit" class="btn btn-success btn-xs">
+                                            <i class='fas fa-trash-alt' style='font-size:15px'></i>
+                                        </button>
+                                    </a>
                                 </td>
 
                                 <td>
@@ -68,5 +73,5 @@
     </div>
 
 </div>
-
+<a class="btn btn-primary" href="{% url 'music:myMusic' %}" role="button">Back</a>
 {% endblock %}
