@@ -28,6 +28,25 @@ def specificAlbum(request, name):
     context = {'album': album, 'songs': songs}
     return render(request, 'music/album.html', context)
 
+def addToFavorites(request, id):
+    flag = False
+    s = Song.objects.get(id=id)
+    song = Song.objects.all()
+    favorite = Favorites.objects.all()
+    current_user = request.user
+    for fav in favorite:
+        if fav.song_id == id :
+            fav.delete()
+            flag = True
+    
+    if flag == False :
+        f = Favorites(song=s, user=current_user)
+        f.save()
+    
+    f = []
+    f = Favorites.objects.all()
+    context = {'f': f, 'song':song}
+    return render(request, 'music/addToFavorites.html', context)
 
 def playlistSongDelete(request, name, id):
     playlist = Playlist.objects.get(playlist_name=name)

@@ -29,7 +29,7 @@
     {% for song in album.song_set.all %}
     <div class="row">
         <div class="col-sm-1"><img  class="l" src="{{ song.image.url }}" title="allbum-name"></div>
-        <div class="col-sm-1"><i class="far fa-heart" style="font-size:18px;"></i> </div>
+        <div class="col-sm-1"><a href="{% url 'music:addToFavorites' song.id %}"><i class="far fa-heart" style="font-size:18px;"></i></a></div>
         <div class="col-sm-4"><h8>{{song.songName}}</h8></div>
     </div>
     <hr>
