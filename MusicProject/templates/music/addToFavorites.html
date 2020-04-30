@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block body_block %}
-  {% for sng in f.song.all %}
+  {% for s in favourite_song %}
   <div class="row">
-    <div class="col-sm-1"><img  class="l" src="{{ sng.image.url }}"></div>
-    <div class="col-sm-4"><h8>{{sng.songName}}</h8></div>
+    <div class="col-sm-1"><img  class="l" src="{{ s.image.url }}"></div>
+    <div class="col-sm-4"><h8>{{s.songName}}</h8></div>
   </div>
   {% endfor %}
 

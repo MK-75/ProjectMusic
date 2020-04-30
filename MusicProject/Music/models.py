@@ -79,4 +79,4 @@ class Artist(models.Model):
 
 class Favorites(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    song = models.ForeignKey(Song, on_delete=models.CASCADE)
+    song = models.OneToOneField(Song, on_delete=models.CASCADE)
