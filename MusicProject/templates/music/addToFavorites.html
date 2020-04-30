@@ -1,10 +1,20 @@
 {% extends "base.html" %}
 {% block body_block %}
+<br>
+<br>
+<div class="container">
+  <div class="row">
+      <div class="col-sm-1"><h8>#</h8></div>
+      <div class="col-sm-4"><h8>TITLE</h8></div>
+      <div class="col-sm-4"><h8>ARTIST</h8></div>
+  </div>
+  <hr>
   {% for s in favourite_song %}
   <div class="row">
-    <div class="col-sm-1"><img  class="l" src="{{ s.image.url }}"></div>
+    <div class="col-sm-1"><img src="{{ s.image.url }}" width="30px" height="30px"></div>
     <div class="col-sm-4"><h8>{{s.songName}}</h8></div>
   </div>
+  <hr>
   {% endfor %}
-
+</div>
 {% endblock body_block %}
